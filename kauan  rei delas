@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Impacto Ambiental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Impacto Ambiental</h1>
+        <label for="pollution">Nível de Poluição (0-100):</label>
+        <input type="range" id="pollution" min="0" max="100" value="50">
+        <label for="deforestation">Desmatamento (0-100):</label>
+        <input type="range" id="deforestation" min="0" max="100" value="50">
+        <label for="biodiversity">Perda de Biodiversidade (0-100):</label>
+        <input type="range" id="biodiversity" min="0" max="100" value="50">
+        <button onclick="calculateImpact()">Calcular Impacto</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateImpact() {
+            var pollution = document.getElementById("pollution").value;
+            var deforestation = document.getElementById("deforestation").value;
+            var biodiversity = document.getElementById("biodiversity").value;
+
+            var totalImpact = (parseInt(pollution) + parseInt(deforestation) + parseInt(biodiversity)) / 3;
+            var resultElement = document.getElementById("result");
+
+            resultElement.innerHTML = "<p>O impacto ambiental é: " + totalImpact.toFixed(2) + "</p>";
+        }
+    </script>
+</body>
+</html>
