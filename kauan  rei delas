@@ -1,64 +1,69 @@
+Entendi, você quer um site apenas em HTML. Abaixo está um exemplo completo de um site de agronomia com várias seções informativas sobre plantação, sem usar CSS ou JavaScript.
+
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Impacto Ambiental</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        input[type="range"] {
-            width: 100%;
-        }
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+    <title>Agronomia e Plantação</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Simulador de Impacto Ambiental</h1>
-        <label for="pollution">Nível de Poluição (0-100):</label>
-        <input type="range" id="pollution" min="0" max="100" value="50">
-        <label for="deforestation">Desmatamento (0-100):</label>
-        <input type="range" id="deforestation" min="0" max="100" value="50">
-        <label for="biodiversity">Perda de Biodiversidade (0-100):</label>
-        <input type="range" id="biodiversity" min="0" max="100" value="50">
-        <button onclick="calculateImpact()">Calcular Impacto</button>
-        <div id="result"></div>
-    </div>
+    <header>
+        <h1>Agronomia e Plantação</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#crops">Tipos de Plantação</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        function calculateImpact() {
-            var pollution = document.getElementById("pollution").value;
-            var deforestation = document.getElementById("deforestation").value;
-            var biodiversity = document.getElementById("biodiversity").value;
+    <section id="home">
+        <h2>Bem-vindo à Agronomia e Plantação</h2>
+        <p>Seu recurso completo para aprender sobre técnicas de plantio, gestão agrícola e muito mais.</p>
+    </section>
 
-            var totalImpact = (parseInt(pollution) + parseInt(deforestation) + parseInt(biodiversity)) / 3;
-            var resultElement = document.getElementById("result");
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma equipe dedicada de agrônomos e agricultores apaixonados por promover práticas agrícolas sustentáveis e eficazes.</p>
+    </section>
 
-            resultElement.innerHTML = "<p>O impacto ambiental é: " + totalImpact.toFixed(2) + "</p>";
-        }
-    </script>
+    <section id="crops">
+        <h2>Tipos de Plantação</h2>
+
+        <article>
+            <h3>Milho</h3>
+            <p>O milho é uma cultura fundamental em muitas partes do mundo. Ele é cultivado principalmente para alimentação humana e animal, além de ser usado em uma variedade de produtos industriais.</p>
+        </article>
+
+        <article>
+            <h3>Soja</h3>
+            <p>A soja é uma leguminosa de grande importância para a alimentação humana e animal. É rica em proteínas e é usada em muitos produtos alimentícios e industriais.</p>
+        </article>
+
+        <article>
+            <h3>Arroz</h3>
+            <p>O arroz é um alimento básico em muitos países. Ele é cultivado em ambientes de terras alagadas e requer uma gestão cuidadosa da água.</p>
+        </article>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para mais informações sobre práticas agrícolas e suporte técnico.</p>
+        <address>
+            <p>Email: <a href="mailto:info@agronomia.com">info@agronomia.com</a></p>
+            <p>Telefone: (11) 1234-5678</p>
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Agronomia e Plantação. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
+```
+
+Este é um site básico com seções para a página inicial, sobre nós, tipos de plantação e contato. Ele utiliza apenas HTML para estruturar o conteúdo.
